@@ -1,7 +1,5 @@
 FitCat - ESP32
 
-Authors: Yongjoon Kweon, Yena Yu, Howell Xia, Kevin Connell
-
 Date: 10/25/24
 
 ### Summary
