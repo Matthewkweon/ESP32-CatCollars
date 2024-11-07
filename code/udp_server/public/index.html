@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Activity Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+        .chart-container {
+            width: 80%;
+            margin: 20px auto;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ESP32 Activity Monitor</h1>
+    <div class="chart-container">
+        <canvas id="activityChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('activityChart').getContext('2d');
+        let chart = null;
+
+        // Initialize the chart
+        function initChart() {
+            const config = {
+                type: 'bar',
+                data: {
+                    labels: [], // Device names as labels
+                    datasets: []
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y', // Horizontal bar chart
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Total Active Time (seconds)'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Device'
+                            },
+                            ticks: {
+                                maxRotation: 0
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false // Hide the legend for simplicity
+                        }
+                    },
+                    animation: false
+                }
+            };
+
+            chart = new Chart(ctx, config);
+        }
+
+        // Initialize the chart when the page loads
+        initChart();
+
+        // Connect to the backend via WebSocket
+        const socket = io();
+
+        // Color map to keep consistent colors for each device
+        const deviceColors = {};
+
+        function getDeviceColor(name) {
+            if (!deviceColors[name]) {
+                deviceColors[name] = `hsl(${Object.keys(deviceColors).length * 137.5 % 360}, 70%, 50%)`;
+            }
+            return deviceColors[name];
+        }
+
+        // Function to update the chart with the latest data
+        socket.on('update', (deviceData) => {
+            if (!chart) return;
+
+            // Clear the previous data
+            chart.data.labels = [];
+            chart.data.datasets = [];
+
+            // Prepare new data
+            const labels = Object.keys(deviceData); // Device names as labels
+            const data = labels.map(name => deviceData[name].totalTime); // Total time for each device
+            const backgroundColors = labels.map(getDeviceColor); // Colors for each device
+
+            // Update chart data
+            chart.data.labels = labels;
+            chart.data.datasets.push({
+                data: data,
+                backgroundColor: backgroundColors
+            });
+
+            // Update the chart to reflect the new data
+            chart.update();
+        });
+
+        // Handle connection errors
+        socket.on('connect_error', (error) => {
+            console.error('WebSocket connection error:', error);
+        });
+    </script>
+</body>
+
+</html>

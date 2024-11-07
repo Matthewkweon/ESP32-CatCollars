@@ -1,0 +1,7 @@
+source "/Users/matthewkweon/esp/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/Users/matthewkweon/esp/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "/Users/matthewkweon/esp/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "/Users/matthewkweon/esp/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/Users/matthewkweon/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/main/Kconfig.projbuild"
+source "/Users/matthewkweon/esp/esp-idf/examples/common_components/protocol_examples_common/Kconfig.projbuild"

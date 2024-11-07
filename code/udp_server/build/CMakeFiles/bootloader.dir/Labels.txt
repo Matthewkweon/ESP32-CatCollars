@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/build/CMakeFiles/bootloader
+/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/build/CMakeFiles/bootloader.rule
+/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/build/CMakeFiles/bootloader-complete.rule
+/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/matthewkweon/Documents/GitHub/02-Team3-Kweon-Connell-Xia-Yu/quest-3/code/udp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
