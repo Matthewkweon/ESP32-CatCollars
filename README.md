@@ -1,4 +1,4 @@
-Quest 3: FitCat
+FitCat - ESP32
 
 Authors: Yongjoon Kweon, Yena Yu, Howell Xia, Kevin Connell
 
