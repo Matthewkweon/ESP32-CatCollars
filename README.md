@@ -93,26 +93,5 @@ In addition, we had many issues with traffic in our Raspberry Pi. When we connec
 
 [![Demo Video](<./images/Screenshot 2024-10-28 at 1.42.05 PM.png>)](https://drive.google.com/file/d/1f4XpnHTWgnEnGc546DV1GL8nhsfLk_RZ/view?usp=sharing)
 <p align="center">
-<i> Demo Video (also did demo in class)</i>
+<i> Demo Video</i>
 </p>
-
-
-
-
-### Self-Assessment 
-
-| Objective Criterion | Rating | Max Value  | 
-|---------------------------------------------|:-----------:|:---------:|
-| Objective One | 1 |  1     | 
-| Objective Two | 1 |  1     | 
-| Objective Three | 1 |  1     | 
-| Objective Four | 1 |  1     | 
-| Objective Five | 1 |  1     | 
-| Objective Six | 1 |  1     | 
-| Objective Seven | 1 |  1     | 
-
-
-### AI and Open Source Code Assertions
-
-- We have documented in our code readme.md and in our code any software that we have adopted from elsewhere
-- We used AI for coding and references
